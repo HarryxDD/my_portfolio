@@ -1,0 +1,175 @@
+@import "../../global.scss";
+
+.work {
+    display: flex;
+    margin-bottom: 300px;
+    z-index: 10;
+
+    @include xs {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    
+    .left {
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        @include xl {
+            margin-top: 180px;
+        }
+
+        h4 {
+            margin-bottom: 20%;
+
+            @include xl {
+                font-size: 45px;
+                margin-bottom: 90px;
+            }
+
+            @include lg {
+                font-size: 25px;
+                margin-bottom: 90px;
+            }
+
+            @include xs {
+                margin-bottom: 0;
+                display: none;
+            }
+
+        }
+
+        .allProj {
+            font-size: 15px;
+            border: 1px solid black;
+            padding: 10px 15px 10px 15px;
+
+            @include xl {
+                font-size: 40px;
+                font-weight: 500;
+                padding: 40px 55px 40px 55px;
+            }
+
+            @include xl {
+                font-size: 20px;
+                font-weight: 600;
+                padding: 20px 35px 20px 35px;
+            }
+        }
+    }
+
+    .right {
+        flex: 6;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include xl {
+            margin-top: 120px;
+        }
+
+        
+
+
+        @include xs {
+            flex-wrap: wrap;
+            margin: 10% 0 0 0;
+        }
+
+        .work {
+            display: flex;
+            flex-direction: column;
+            margin: 0 10px 30px 10px;
+
+            @include lg {
+                width: 40;
+            }
+
+
+            @include xs {
+                margin: 0;     
+            }
+
+
+            
+            img {
+                width: 280px;
+                height: 180px;
+                margin-bottom: 22px;
+
+                @include xl {
+                    width: 650px;
+                    height: 380px;
+                    margin-bottom: 40px;      
+                }
+
+                @include lg {
+                    width: 450px;
+                    height: 240px;
+                    margin-bottom: 30px;      
+                }
+
+                @include xs {
+                    width: 450px;       
+                }
+
+                
+            }
+
+            .subTitle{
+                font-size: 12px;
+                color: gray;
+                margin-bottom: 12px;
+
+                @include xl {
+                    font-size: 25px;     
+                }
+
+                @include lg {
+                    font-size: 17px;     
+                }
+
+                @include xs {
+                    display: none;      
+                }
+
+            }
+            
+            .title {
+                font-size: 17px;
+                font-weight: 700;
+                margin-bottom: 20px;
+
+                @include xl {
+                    font-size: 35px;     
+                }
+
+                @include lg {
+                    font-size: 30px;     
+                }
+
+                @include xs {
+                    display: none;      
+                }
+            }
+
+            .category {
+                font-size: 12px;
+                font-weight: 500;
+
+                @include xl {
+                    font-size: 21px;     
+                }
+
+                @include lg {
+                    font-size: 15px;
+                }
+
+                @include xs {
+                    display: none;      
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+@import "../../global.scss";
+
+.topbar {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(255,255,255,0);
+    color: $mainColor;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    @include xs {
+        width: 384px;
+    }
+
+    @include xl {
+        height: 120px;
+    }
+
+    .wrapper {
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        
+
+        .left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            .logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(255, 255, 255);
+                transition: all 1s ease;
+                text-decoration: none;
+
+                @include xs {
+                    display: none;
+                }
+
+                @include xl {
+                    margin-left: 20px;
+                    font-size: 45px;
+                }
+
+                &.active {
+                    color: rgb(0, 0, 0);
+                }
+            } 
+
+            
+            
+            
+            
+        }
+
+        .right {
+
+            .hamburger {
+                width: 32px;
+                height: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+
+                @include xl {
+                    width: 52px;
+                    height: 35px;
+                }
+
+                span {
+                    width: 100%;
+                    height: 3px;
+                    background-color: $mainColor;
+                    transform-origin: left;
+                    transition: all 2s ease;
+                }
+            }
+        }
+    }
+
+    &.act {
+        .hamburger { 
+            span {
+                &:first-child { 
+                    transform: rotate(45deg);
+                    background-color: white;
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:last-child {
+                    transform: rotate(-45deg);
+                    background-color: white;
+                }
+            }
+        }
+    }
+}

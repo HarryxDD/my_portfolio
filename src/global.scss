@@ -1,0 +1,31 @@
+$mainColor: #000000;
+
+$xs: '480px';
+$sm: '850px';
+$lg: '1920px';
+$xlg: '2249px';
+$xl: '2560px';
+
+@mixin xs {
+    @media (max-width: #{$xs}) {
+        @content
+    }
+};
+
+@mixin sm {
+    @media (max-width: #{$sm}) {
+        @content
+    }
+};
+
+@mixin lg {
+    @media (max-width: #{$lg}) {
+        @content
+    }
+};
+
+@mixin xl {
+    @media (max-width: #{$xl}) {
+        @content
+    }
+};

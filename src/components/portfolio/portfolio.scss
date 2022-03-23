@@ -1,0 +1,208 @@
+@import "../../global.scss";
+
+.portfolio {
+    width: 100%;
+    background-color: white;
+    height: 100%;
+    display: flex;
+
+    @include xs {
+        flex-direction: column;
+    }
+
+
+    .left {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+
+        @include xl {
+            margin-left: 170px;
+        }
+
+        
+
+        @include xs {
+            flex: 2;
+            margin-top: 10px;
+        }
+        
+        .quote {
+            flex: 6;
+            font-size: 40px;
+            margin: 60px 0 0 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include xl {
+                font-size: 47px;
+                margin: 50px 0 0 270px;
+            }
+
+            @include lg {
+                font-size: 33px;
+                margin: 50px 0 0 50px;
+            }
+
+            @include xs {
+                font-size: 20px;
+                margin: 80px 0 0 50px;
+            }
+
+        }
+
+        .arrowdown {
+            width: 100%;
+            flex: 4;
+            display: flex;
+            
+            @include xl {
+                margin-top: 130px;
+            }
+
+            @include xs {
+                display: none;
+            }
+
+            .scroll {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        
+                a {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    text-decoration: none;
+                    color: black;
+                    
+                    p {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transform: rotate(-90deg);
+                        margin: 70px;
+
+                        @include xl {
+                            font-size: 30px;
+                            margin-left: 115px;
+                        }
+
+                        @include lg {
+                            font-size: 20px;
+                            margin-left: 0px;
+                        }
+                    }
+
+                    img {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 30px;
+                        margin-top: 25px;
+                        margin-left: 144px;
+                        animation:  arrowBlink 2s infinite;
+
+                        @include xl {
+                            margin-top: 100px;
+                            margin-left: 257px;
+                            width: 50px;
+                        }
+
+                        @include lg {
+                            width: 25px;
+                            margin-left: 99px;
+                            margin-top: 40px;
+                        }
+                    }
+        
+                    @keyframes arrowBlink {
+                        100%{
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex: 5;
+        height: 100%;
+        margin-left: 0px;
+        padding-left: 150px;
+
+        @include xs {
+            margin-left: 50px;
+            justify-content: flex-start;
+            margin-top: 30px;
+        }
+
+        .above {
+            flex: 5;
+            height: inherit;
+
+            img {
+                @include xl {
+                    width: 700px;  
+                    margin-bottom: 0px;
+                }
+
+                @include lg {
+                    width: 500px;
+                }
+            }
+        }
+
+        .below {
+            flex: 5;
+            margin-top: 70px;
+
+            p {
+                width: 70%;
+                font-size: 25px;
+    
+                .boldText {
+                    font-weight: 700;
+                }
+    
+                @include xl {
+                    font-size: 37px;
+                }
+
+                @include xl {
+                    font-size: 27px;
+                }
+            }
+    
+            h4 {
+                margin-top: 65px;
+                font-weight: 400;
+                font-style: italic;
+    
+                .underlineText {
+                    padding-bottom: 1px;
+                    border-bottom: 1px solid black;
+                    line-height: inherit;
+                    
+                }
+
+                @include xl {
+                    font-size: 27px;
+                }
+
+                @include lg {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

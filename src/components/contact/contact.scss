@@ -1,0 +1,112 @@
+@import "../../global.scss";
+
+.contact {
+    background-color: black;
+    display: flex;
+    height: 50vh;
+    margin-top: 3%;
+    color: white;
+    width: 100%;
+    z-index: 1000;
+
+    @include xs {
+        flex-direction: column;   
+    }
+
+    .left {
+        flex: 5;
+        display: flex;
+        padding-left: 4%;
+        padding-top: 20%;
+
+        @include xl {
+            padding-left: 4%;
+            padding-top: 21%;
+            font-size: 30px;
+        }
+
+        @include lg {
+            padding-left: 3%;
+            padding-top: 18%;
+            font-size: 20px;
+        }
+
+        @include xs {
+            display: none;      
+        }
+    }
+    
+    .right {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            font-size: 55px;
+            padding-bottom: 35px;
+
+            @include xl {
+                font-size: 110px;
+                padding-bottom: 7px;
+            }
+
+            @include lg {
+                font-size: 70px;
+                padding-bottom: 7px;
+            }
+
+            @include xs {
+                font-size: 35px;
+                margin: 20px 0 0 30px;   
+                padding-bottom: 0;
+            }
+        }
+
+        p {
+            font-weight: 300;
+            padding-bottom: 25px;
+
+            @include xl {
+                font-size: 30px;
+            }
+
+            @include lg {
+                font-size: 20px;
+            }
+            
+            @include xs {
+                font-size: 15px;
+                margin-left: 30px;
+            }
+
+            
+        }
+
+        .contactLink {
+            padding-top: 55px;
+            padding-left: 0;
+
+            li {
+                float: left;
+                list-style-type: none;
+                padding-right: 20px;
+            }
+
+            @include xl {
+                font-size: 40px;
+            }
+
+            @include lg {
+                font-size: 20px;
+            }
+
+            @include xs {
+                font-size: 13px;
+                padding-left: 30px;
+            }
+
+            
+        }
+    }
+}
